@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                background-color: aquamarine;
+            }
+
+            video,
+            img {
+                clip-path: url(#triangle);
+            }
+        </style>
+    </head>
+    <body>
+        <video
+            src="mood-ring.mp4"
+            width="480"
+            height="270"
+            controls
+            loop
+        ></video>
+
+        <br />
+
+        <img src="cat.webp" width="360" height="240" alt="A cute cat" />
+
+        <svg width="250" height="240" id="clip">
+            <defs>
+                <clipPath id="triangle">
+                    <polygon points="130,0 0,240 250,240" />
+                </clipPath>
+            </defs>
+        </svg>
+    </body>
+</html>

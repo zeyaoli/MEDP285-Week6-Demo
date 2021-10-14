@@ -1,0 +1,27 @@
+.c1 {
+    transform: translate(75px, -50px); /* translate method along x, y axes */
+    /* transform: translateX(75px); */
+    /* transform: translateY(-50px); */
+}
+
+.c2 {
+    transform: rotate(45deg);
+    /* bottom right */
+    /* transform-origin: 200px 200px; */
+    /* transform-origin: top right; */
+    /* default value */
+    transform-origin: 50% 50%;
+}
+
+.c3 {
+    transform: scale(0.5, 0.5) rotate(180deg); /* multiple methods */
+    /* transform: scaleX(0.5); */
+}
+
+.c4 {
+    transform: skew(40deg, 20deg); /* skew along x and y axes */
+}
+
+.c2:hover {
+    transform: scale(1.2, 1.2);
+}

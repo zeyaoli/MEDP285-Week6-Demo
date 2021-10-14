@@ -1,0 +1,20 @@
+.compass {
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+
+.c1:hover {
+    transform: rotate(90deg);
+}
+
+.c2:hover {
+    transform: rotate(180deg);
+}
+
+.c3:hover {
+    transform: rotate(-90deg);
+}
+
+.c4:hover {
+    transform: rotate(-180deg);
+}

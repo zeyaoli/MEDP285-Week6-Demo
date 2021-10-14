@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SVG Hover</title>
+
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            .c1 {
+                fill: blue;
+            }
+            .c2 {
+                fill: red;
+            }
+            .c3 {
+                fill: green;
+            }
+            .c1,
+            .c2,
+            .c3 {
+                opacity: 0.5;
+            }
+            .c1:hover,
+            .c2:hover,
+            .c3:hover {
+                opacity: 1;
+            }
+            .c1:active,
+            .c2:active,
+            .c3:active {
+                filter: url(#blur);
+            }
+        </style>
+    </head>
+    <!-- Talk about grouping, adding link, adding style directly to svg  -->
+    <body>
+        <svg version="1.1" width="520" height="320">
+            <defs>
+                <filter id="blur">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+                </filter>
+            </defs>
+            <g id="circles">
+                <a href="https://google.com/">
+                    <circle class="c1" cx="160" cy="160" r="150" />
+                </a>
+                <a href="https://zeyao.online/">
+                    <circle class="c2" cx="260" cy="160" r="150" />
+                </a>
+                <a href="https://www.nytimes.com/">
+                    <circle class="c3" cx="360" cy="160" r="150" />
+                </a>
+            </g>
+        </svg>
+    </body>
+</html>

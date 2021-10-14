@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SVG Basics</title>
+    </head>
+    <body>
+        <svg width="550" height="300">
+            <defs>
+                <linearGradient
+                    id="gradient1"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="0%"
+                >
+                    <stop offset="0%" stop-color="cyan" stop-opacity="0.8" />
+                    <stop
+                        offset="100%"
+                        stop-color="yellow"
+                        stop-opacity="0.8"
+                    />
+                </linearGradient>
+            </defs>
+
+            <!-- square -->
+            <rect
+                x="30"
+                y="30"
+                width="240"
+                height="240"
+                fill="url(#gradient1)"
+            />
+            <rect x="0" y="30" width="100" height="100" fill="blue" />
+            <!-- close the self-contained xml element with / -->
+
+            <defs>
+                <linearGradient
+                    id="gradient2"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="0%"
+                >
+                    <stop offset="0%" stop-color="magenta" stop-opacity="0.8" />
+                    <stop offset="100%" stop-color="cyan" stop-opacity="0.8" />
+                </linearGradient>
+            </defs>
+
+            <!-- circle -->
+            <circle cx="270" cy="150" r="120" fill="url(#gradient2)" />
+
+            <defs>
+                <linearGradient
+                    id="gradient3"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="0%"
+                >
+                    <stop offset="0%" stop-color="yellow" stop-opacity="0.8" />
+                    <stop
+                        offset="100%"
+                        stop-color="magenta"
+                        stop-opacity="0.8"
+                    />
+                </linearGradient>
+            </defs>
+
+            <!-- RadialGradient -->
+            <!-- <defs>
+                <radialGradient id="RadialGradient1">
+                    <stop offset="0%" stop-color="red" />
+                    <stop offset="100%" stop-color="blue" />
+                </radialGradient>
+            </defs> -->
+
+            <!-- triangle -->
+            <polygon
+                points="400,30 270,270 520,270"
+                fill="url(#RadialGradient1)"
+            />
+
+            <!-- line -->
+            <line
+                x1="50"
+                y1="150"
+                x2="500"
+                y2="150"
+                stroke="black"
+                stroke-width="1"
+            />
+        </svg>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS Transition</title>
+        <style>
+            .shape {
+                width: 200px;
+                height: 25px;
+                border-radius: 5px;
+                margin-bottom: 1px;
+                background-color: gray;
+
+                /* individual transition properties */
+                /* transition-property: background-color transform; */
+                /* transition-duration: 2s; */
+                /* transition-timing-function: cubic-bezier(.1, .9, .9, .5); */ /* fast-slow-medium */
+                /* transition-timing-function: ease;*/ /* default: slow start, then fast, end slowly; */
+                /* transition-delay: 250ms; */
+
+                /* transition property shorthand */
+                /* transition: all 500ms ease 0s;*/ /* transition all animatable properties over 500 milliseconds, with default easing, and no delay) */
+
+                /* multiple transitions in sequence */
+                transition: background-color 200ms ease-in,
+                    transform 200ms ease-out 100ms;
+            }
+
+            .shape:hover {
+                background-color: black;
+                transform: translateX(25px);
+            }
+
+            .shape:active {
+                background-color: red;
+                transition-duration: 0s;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- https://easings.net/ -->
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </body>
+</html>
